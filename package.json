@@ -4,15 +4,20 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "watch": "tsc && vite build --watch",
-    "start": "react-scripts start"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
+    "compile:scss": "sass src/assets/scss/argon-dashboard-react.scss src/assets/css/argon-dashboard-react.css",
+    "minify:scss": "sass src/assets/scss/argon-dashboard-react.scss src/assets/css/argon-dashboard-react.min.css --style compressed",
+    "build:scss": "npm run compile:scss && npm run minify:scss && npm run map:scss"
   },
   "dependencies": {
     "@fluentui/example-data": "^8.4.11",
     "@fluentui/react": "^8.110.7",
     "@fluentui/react-icons": "^2.0.206",
+    "antd": "^5.7.0",
     "@react-spring/web": "^9.7.3",
     "dompurify": "^3.0.4",
     "react": "^18.2.0",
@@ -27,7 +32,7 @@
     "@types/react-dom": "^18.2.6",
     "@vitejs/plugin-react": "^4.0.2",
     "prettier": "^3.0.0",
-    "typescript": "^4.0.0",
+    "typescript": "^5.1.6",
     "vite": "^4.4.2"
   },
   "browserslist": {
