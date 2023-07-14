@@ -5,7 +5,7 @@ import { setVirtualParent } from "@fluentui/dom-utilities";
 import { CommandBar, ICommandBarItemProps } from "@fluentui/react/lib/CommandBar";
 import Dropzone, { FileWithPath } from "react-dropzone";
 
-import { Button } from "antd";
+// import { Button } from "antd";
 import styles from "./QuestionInput.module.css";
 
 interface Props {
@@ -54,9 +54,9 @@ export const QuestionInput = ({ onSend, disabled, placeholder, clearOnSend }: Pr
                         <div {...getRootProps()}>
                             <input {...getInputProps()} multiple />
 
-                            <Button color="primary">
+                            <button color="primary">
                                 Upload
-                            </Button>
+                            </button>
                         </div>
                     )}
                 </Dropzone>
@@ -69,9 +69,9 @@ export const QuestionInput = ({ onSend, disabled, placeholder, clearOnSend }: Pr
                             <p key={index}>{file.name}</p>
                         ))}
 
-                        <Button color="primary" onClick={handleUpload}>
+                        <button color="primary" onClick={handleUpload}>
                             上传
-                        </Button>
+                        </button>
                     </div>
                 )}
             </div>
