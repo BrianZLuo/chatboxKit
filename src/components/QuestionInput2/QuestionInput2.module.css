@@ -1,0 +1,48 @@
+.questionInputContainer {
+    display:-ms-flexbox;
+    position:fixed;
+    bottom:0px;
+    left:0px;
+    box-shadow:0 8px 16px #00000024,0 0 2px #0000001f;
+    height:185px;
+    width:100%;
+    padding-top:15px;
+    background:white;
+    left:0;
+    z-index:1
+}
+
+.questionInputTextArea {
+    position:relative;
+    border-radius:8px;
+    box-shadow:0 8px 16px #00000024,0 0 2px #0000001f;
+    left:60px;
+    height:80px;
+    margin:40px 40px 40px 130px;
+    width:80%;
+    line-height:40px
+}
+
+.questionInputButtonsContainer {
+    position:relative;
+    top:47px;
+    right:63px
+}
+
+.questionInputSendButton {
+    cursor:pointer;
+    position:relative;
+    right:56px;
+    display:flex;
+    gap:16px;
+    top:15px;
+}
+
+.questionInputSendButtonDisabled {
+    opacity: 0.4;
+}
+
+.commandButton{
+    margin-right:20px;
+    margin-bottom:20px;
+}

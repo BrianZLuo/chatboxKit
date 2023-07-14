@@ -1,0 +1,45 @@
+
+
+.questionInputContainer{
+    border-radius:8px;
+    box-shadow:#4747473d,0 .5rem 1rem -.125rem;
+    min-height:110px;
+    max-height:148px;
+    width:100%;
+    padding:15px;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    align-content:center
+}
+
+.uploadContainer{
+    width:100%;
+    display:flex;
+    background:pink
+}
+
+.questionInputTextArea{
+    width:100%;
+    line-height:40px
+}
+
+.questionInputButtonsContainer{
+    display:flex;
+    justify-content:flex-end
+}
+
+.questionInputSendButton{
+    display:flex;
+    gap:32px;
+    cursor:pointer;
+    position:relative;
+    right:0px;
+    top:18px
+}
+
+.questionInputSendButtonDisabled{
+    opacity:.4
+}
+

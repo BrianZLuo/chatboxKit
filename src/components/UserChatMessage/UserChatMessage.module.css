@@ -1,0 +1,16 @@
+.container{
+    margin-top:10px;
+    display:flex;
+    justify-content:flex-end;
+    margin-bottom:20px;
+    max-width:80%;
+    margin-left:auto
+}
+
+.message{
+    padding:20px;
+    background:#fbe8cc;
+    border-radius:8px;
+    box-shadow:0 2px 4px #00000024,0 0 2px #0000001f;
+    outline:transparent solid 1px
+}

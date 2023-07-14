@@ -1,0 +1,7 @@
+.container{
+    position:relative;
+    right:10px;
+    display:flex;
+    align-items:center;
+    cursor:pointer
+}

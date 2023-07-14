@@ -1,0 +1,18 @@
+.disabled{
+    opacity:.4
+}
+
+.container{
+    position:absolute;
+    left:190px;
+    top:12px;
+    align-items:center;
+    gap:6px;
+    cursor:pointer;
+    display:flex;
+    margin-bottom:20px
+}
+
+._disabled{
+    opacity:.4
+}
