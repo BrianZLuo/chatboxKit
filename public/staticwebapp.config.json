@@ -1,7 +1,4 @@
 {
-  "navigationFallback": {
-    "rewrite": "/index.html"
-  },
   "routes": [
     {
       "route": "/*",
@@ -9,5 +6,12 @@
       "statusCode": 200
     }
   ],
-  "rewrites": []
+  "build": {
+    "command": "npm run build",
+    "outputPath": "build"
+  },
+  "appArtifactLocation": "build",
+  "navigationFallback": {
+    "rewrite": "/index.html"
+  }
 }
