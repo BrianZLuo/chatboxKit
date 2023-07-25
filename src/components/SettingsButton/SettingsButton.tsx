@@ -3,6 +3,11 @@ import { Settings24Regular } from "@fluentui/react-icons";
 import { IPersonaSharedProps, Persona, PersonaSize, PersonaPresence } from "@fluentui/react/lib/Persona";
 //import { TestImages } from "@fluentui/example-data";
 import styles from "./SettingsButton.module.css";
+import { Button, Popover, Avatar } from 'antd';
+
+import { useDispatch, useSelector } from 'react-redux';
+import { AppState } from '../../store';
+import { toggleDeveloperMode } from '../../actions';
 
 interface Props {
     className?: string;
@@ -17,6 +22,11 @@ export const SettingsButton = ({ className, onClick }: Props) => {
         secondaryText: "Software Engineer",
         tertiaryText: "In a meeting",
         optionalText: "Available at 4:00pm"
+    };
+    const developerMode = useSelector((state: AppState) => state.developerMode);
+    const dispatch = useDispatch();
+    const handleDeveloperModeToggle = () => {
+        dispatch(toggleDeveloperMode());
     };
     return (
         <div className={`${styles.container} ${className ?? ""}`}>
@@ -43,6 +53,27 @@ export const SettingsButton = ({ className, onClick }: Props) => {
                 </svg>
             </div>
             &nbsp;&nbsp;&nbsp;&nbsp;
+            <Popover 
+                placement="bottom" 
+                /*title={<span>Title</span>}*/
+                content={(
+                    <div  className={styles.profile}>
+                        {developerMode.developerMode ?
+                        <div className={styles.profile}>
+                            <Avatar src="https://xsgames.co/randomusers/avatar.php?g=pixel&key=1" />
+                            <h3>Brian Luo</h3>
+                            <p>Developer</p>
+                        </div>
+                        :
+                        <div className={styles.profile}>
+                            <Avatar src="https://xsgames.co/randomusers/avatar.php?g=pixel&key=2" />
+                            <h3>Jay Hui</h3>
+                            <p>Admin</p>
+                        </div>}
+                        <Button type="primary" onClick={handleDeveloperModeToggle}>Switch Account</Button>
+                    </div>
+                )} 
+                trigger="click">
             <div>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -67,6 +98,7 @@ export const SettingsButton = ({ className, onClick }: Props) => {
                     </g>
                 </svg>
             </div>
+            </Popover>
             {/*  <Persona {...examplePersona} size={PersonaSize.size32} /> */}
         </div>
     );

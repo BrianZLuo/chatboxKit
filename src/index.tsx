@@ -12,7 +12,8 @@ import Chat from "./pages/chat/Chat";
 import NoPage from "./pages/NoPage";
 import OneShot from "./pages/oneshot/OneShot";
 //
-
+import { Provider } from "react-redux";
+import store from "./store";
 
 initializeIcons();
 
@@ -54,6 +55,8 @@ export default function App() {
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <React.StrictMode>
         { /* <RouterProvider router={router} /> */}
-        <App />
+        <Provider store={store}>
+            <App />
+        </Provider>
     </React.StrictMode>
 );

@@ -9,7 +9,8 @@
 
 .message{
     padding:20px;
-    background:#fbe8cc;
+    background:#00754A;
+    color: white;
     border-radius:8px;
     box-shadow:0 2px 4px #00000024,0 0 2px #0000001f;
     outline:transparent solid 1px

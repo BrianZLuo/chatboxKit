@@ -139,12 +139,12 @@ const Chat = () => {
                             <h2 className={styles.chatEmptyStateSubtitle}>Ask anything or try an example</h2> */}
                             <div className={styles.imgContainer}>
                                 <div className={styles.leftWordContainer}>
-                                    <div className={styles.data}>Start a conversation with your tax data</div>
-                                    <div className={styles.ask}>Ask anything related to tax or select a sample question</div>
+                                    <div className={styles.data}>请咨询您的星巴克助手</div>
+                                    <div className={styles.ask}>可以询问任何关于假期的问题</div>
                                 </div>
                                 <div className={styles.rightContainer}>
                                     <div className={styles.imgCon}>
-                                        <img src="/halfBack.png" alt="示例图片" width="100%" height="100%" />
+                                        {/*<img src="/halfBack.png" alt="示例图片" width="100%" height="100%" />*/}
                                     </div>
                                 </div>
                             </div>
